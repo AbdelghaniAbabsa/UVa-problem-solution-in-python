@@ -1,0 +1,20 @@
+while True:
+    k = int(input())#nbr queries
+    if k==0:
+        break
+    N, M = input().split()
+    n, m= int(N), int(M) #representing the coordinates of the division point
+        
+    for _ in range(k):
+        X, Y = input().split()
+        x, y= int(X), int(Y)
+        if x<n and y>m:
+            print('NO')
+        elif x>n and y>m:
+            print('NE')
+        elif x>n and y<m:
+            print('SE')
+        elif x<n and y < m:
+            print('SO')
+        else:
+            print('divisa')
