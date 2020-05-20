@@ -1,0 +1,16 @@
+n = int(input())
+if n < 20 :
+    for k in range(n):
+        s = []
+        salaries = input().split()
+        for sal in salaries:
+          s.append(sal)  
+        a = int(s[0])
+        b = int(s[1])
+        c = int(s[2])
+        if (a>b and a>c and b>=c) or (c > a and c>b and b>=a) :
+            print('Case ' + str(k+1) + ':', b)
+        elif (a>b and a>c and c>=b) or (b>a and b>c and c>=a):
+            print('Case ' + str(k+1) + ':', c)
+        elif (b>a and b>c and a>=c) or (c>a and c>b and a>=b):
+            print('Case ' + str(k+1) + ':', a)
